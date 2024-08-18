@@ -25,14 +25,23 @@
             </button>
           </div>
           <div class="hidden lg:flex lg:gap-x-12">
+            @auth              
             <a href="/eventos" class="text-sm font-semibold leading-6 text-gray-900">Eventos</a>
             <a href="/team" class="text-sm font-semibold leading-6 text-gray-900">Team</a>
             <a href="/productos" class="text-sm font-semibold leading-6 text-gray-900">Productos</a>
             <a href="/lineas-investigacion" class="text-sm font-semibold leading-6 text-gray-900">Lineas de investigación</a>
             <a href="/secciones-investigacion" class="text-sm font-semibold leading-6 text-gray-900">Secciones investigación</a>
+            @else
+            <h1>Admin</h1>
+            @endauth
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+            @auth              
+            <form action="/logout" method="POST">
+              @csrf
+                <button class="text-sm font-semibold leading-6 text-gray-900">Log out <span aria-hidden="true">&rarr;</span></button>
+            </form>
+            @endauth
           </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
@@ -62,7 +71,7 @@
                   <a href="/secciones-investigacionj" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Secciones investigación</a>
                 </div>
                 <div class="py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
                 </div>
               </div>
             </div>

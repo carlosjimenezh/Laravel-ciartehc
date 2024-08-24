@@ -3,12 +3,19 @@
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('admin');
+    return view('home');
 });
+
+Route::get('/difusion', function() {return view('difusion');});
+Route::get('/equipo', function() {return view('equipo');});
+Route::get('/productos', [ProductosController::class, 'index']);
+Route::get('/productos/{id}', [ProductosController::class, 'show']);
+
 
 Route::get('/login', function() {
     return view('login');

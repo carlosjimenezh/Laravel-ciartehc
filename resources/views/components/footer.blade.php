@@ -1,5 +1,5 @@
 <footer class="p-4 bg-[#F87060] text-white">
-    <div class="grid grid-cols-3 py-10">
+    <div class="grid grid-cols-3 py-10 container">
         <img class="logo self-center max-w-[13em] w-full" src="/images/logo.png" alt="">
         <div>
             <img src="images/logo_udg.png" alt="" class="w-[200px] m-auto mb-[50px]">

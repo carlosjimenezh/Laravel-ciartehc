@@ -14,8 +14,33 @@
     </section>
 
 
-    <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-[750px] mx-auto">
+    <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-5xl mx-auto">
         <h1 class="text-5xl mb-10 font-bold">Noticias</h1>
+        <div class="swiper h-80 md:h-[550px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
+                    <img src="images/bg-teatro.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center">
+                </div>
+                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
+                    <img src="images/bg-radio.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center">
+                </div>
+                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
+                    {{-- <img src="images/bg-teatro.jpg" alt=""> --}}
+                    slide
+                </div>
+            </div>
+            <!-- poner un recordatorio en admin diciendo que las imágenes aparecen centradas, para mostrar la información centrada -->
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper-pagination !-bottom-3"></div>
     </section>
 
 

@@ -1,5 +1,5 @@
 <header class="bg-white fixed w-full top-0">
-<nav class="mx-auto flex max-w-7xl items-end justify-between p-2 lg:px-8" aria-label="Global">
+<nav class="mx-auto flex container items-end justify-between p-4" aria-label="Global">
     <div class="flex lg:flex-1">
     <a href="/" class="-m-1.5 p-1.5">
         <img class="h-24 w-auto" src="/images/logo.png" alt="">

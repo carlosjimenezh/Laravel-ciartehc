@@ -11,6 +11,11 @@
     color: #F87060 !important
 }
 
+.swiper-pagination-bullet {
+    height: 10px !important;
+    width : 10px !important;
+}
+
 .swiper-pagination-bullet-active {
     background-color: #F87060 !important;
 }

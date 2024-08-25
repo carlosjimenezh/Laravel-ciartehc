@@ -21,7 +21,7 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
-                    <img src="images/bg-teatro.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center">
+                    <img src="images/bg-teatro.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
                 </div>
                 <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
                     <img src="images/bg-radio.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center">

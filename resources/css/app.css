@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+* {
+    scroll-margin: 150px;
+}
+
 .swiper-button-next {
     color: #F87060 !important
 }

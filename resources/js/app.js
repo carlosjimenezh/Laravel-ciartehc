@@ -39,6 +39,14 @@ document
         document.querySelector("#collapsing-menu").classList.toggle("hidden");
     });
 
+document
+    .querySelector("#lineas-investigacion")
+    ?.addEventListener("click", () => {
+        document
+            .querySelector("#menu-lineas-investigacion")
+            .classList.toggle("hidden");
+    });
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         document.querySelector("#header")?.classList.add("scrolled");

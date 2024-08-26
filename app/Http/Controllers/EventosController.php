@@ -39,7 +39,7 @@ class EventosController extends Controller
         $evento->fecha_evento = $request->fecha;
         $evento->imagen = $request->imagen;
         $evento->url = $request->link;
-        // $evento->activo = $request->activo;
+        $evento->activo = $request->filled('activo');
         $evento->save();
         return redirect('/eventos');
     }
@@ -60,7 +60,7 @@ class EventosController extends Controller
         $evento->fecha_evento = $request->fecha;
         $evento->imagen = $request->imagen;
         $evento->url = $request->link;
-        // $evento->activo = $request->activo;
+        $evento->activo = $request->filled('activo');
         $evento->save();
         return redirect("/eventos");
     }

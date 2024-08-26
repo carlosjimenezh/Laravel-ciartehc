@@ -1,4 +1,4 @@
-<header class="bg-white fixed w-full top-0">
+<header id="header" class="bg-white fixed w-full top-0 z-50">
 <nav class="mx-auto flex container items-end justify-between p-4" aria-label="Global">
     <div class="flex lg:flex-1">
     <a href="/" class="-m-1.5 p-1.5">
@@ -6,8 +6,7 @@
     </a>
     </div>
     <div class="flex lg:hidden">
-    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-        <span class="sr-only">Open main menu</span>
+    <button id="btn-menu" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -17,7 +16,7 @@
     <div class="relative">
         <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
         Lineas de investigación
-        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
         </svg>
         </button>
@@ -32,7 +31,7 @@
             From: "opacity-100 translate-y-0"
             To: "opacity-0 translate-y-1"
         -->
-        <div class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+        <div id="menu-lineas-investigacion" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
         <div class="p-4">
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
             <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
@@ -87,17 +86,12 @@
     </div>
 </nav>
 <!-- Mobile menu, show/hide based on menu open state. -->
-<div class="lg:hidden" role="dialog" aria-modal="true">
+<div id="collapsing-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-10"></div>
-    <div class="hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-    <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-        </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-        <span class="sr-only">Close menu</span>
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <img class="absolute bottom-4 w-40 right-1/2 translate-x-1/2" src="/images/logo.png" alt="">
+    <div class="flex items-center justify-end">
+        <button id="close-collapsing-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>

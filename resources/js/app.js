@@ -28,3 +28,21 @@ const swiper = new Swiper(".swiper", {
         delay: 5000,
     },
 });
+
+document.querySelector("#btn-menu")?.addEventListener("click", () => {
+    document.querySelector("#collapsing-menu").classList.toggle("hidden");
+});
+
+document
+    .querySelector("#close-collapsing-menu")
+    ?.addEventListener("click", () => {
+        document.querySelector("#collapsing-menu").classList.toggle("hidden");
+    });
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        document.querySelector("#header")?.classList.add("scrolled");
+    } else {
+        document.querySelector("#header")?.classList.remove("scrolled");
+    }
+});

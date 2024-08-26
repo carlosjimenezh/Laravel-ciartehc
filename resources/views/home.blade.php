@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-[750px] mx-auto" id="quienes-somos">
+    <section class="my-[200px] md:my-[250px] md:mb-[350px] p-4 relative text-center max-w-[750px] mx-auto" id="quienes-somos">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">¿Quiénes somos?</h1>
         <p class="mb-3 text-pretty">
             Espacio diseñado para realizar <strong>investigación de alto nivel</strong>, articulando esfuerzo en el eje de docencia a nivel pregrado y posgrado, a la vez que contribuirá al fortalecimiento de actividades de <strong>divulgación, extensión, vinculación y difusión.</strong>
@@ -7,14 +7,14 @@
         <p class="text-pretty">
             Ofrecerá de manera permanente <strong>diplomados, cursos y talleres</strong> para todas aquellas personas que deseen actualizar sus saberes y pretendan introducirse paulatinamente en las disciplinas de las <strong>artes, las humanidades y la comunicación.</strong> Dado a su carácter regional, nacional e internacional, realizará eventos donde se promueva el intercambio de experiencias, reflexiones, análisis, discusiones y aportes sobre temas esenciales que den vida a propuestas relacionadas con las <strong>artes, las humanidades y la comunicación.</strong>
         </p>
-        <img src="images/1.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] left-0 md:left-[-20px]">
-        <img src="images/3.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] left-[30%] md:left-[30%]">
-        <img src="images/2.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] right-[30%] md:right-[30%]">
-        <img src="images/4.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] right-0 md:right-[-20px]">
+        <img src="images/1.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-70px] md:bottom-[-100px] left-0 md:left-[-20px]">
+        <img src="images/3.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-70px] md:bottom-[-100px] left-[30%] md:left-[30%]">
+        <img src="images/2.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-70px] md:bottom-[-100px] right-[30%] md:right-[30%]">
+        <img src="images/4.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-70px] md:bottom-[-100px] right-0 md:right-[-20px]">
     </section>
 
 
-    <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-5xl mx-auto">
+    <section class="my-[200px] md:my-[250px] md:mb-[350px] p-4 relative text-center max-w-5xl mx-auto">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">Noticias</h1>
         <div class="swiper h-80 md:h-[550px]">
             <!-- Additional required wrapper -->
@@ -57,7 +57,7 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                 <a href="https://www.facebook.com/teatrosurzapotlan" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                    Saber más
+                    Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
                     </svg>
@@ -73,7 +73,7 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                 <a href="https://www.facebook.com/PolicromiaRadioUDGGuzman" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                    Saber más
+                    Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
                     </svg>
@@ -89,7 +89,7 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                 <a href="http://www.cusur.udg.mx/es/ciartehc/publicaciones" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                    Saber más
+                    Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
                     </svg>
@@ -105,7 +105,7 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                 <a href="https://www.youtube.com/channel/UCsl8ULmX_tJrp6LEJq4v8hg" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                    Saber más
+                    Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
                     </svg>
@@ -115,7 +115,7 @@
     </section> 
 
 
-    <section id="equipo" class="text-center max-w-[1300px] mx-auto p-4 my-[250px]">
+    <section id="equipo" class="text-center max-w-[1300px] mx-auto p-4 my-[200px] md:my-[250px]">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">Equipo</h1>
         <!-- usuario -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="my-[250px] mb-[350px] p-4 relative container">
+    <section class="my-[200px] md:my-[250px] md:mb-[200px] p-4 relative container">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold text-center">Equipo CIARTEHC</h1>
         <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
             <figure id="jorge" class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">

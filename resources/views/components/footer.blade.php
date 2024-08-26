@@ -7,7 +7,7 @@
             <a href="https://www.udg.mx/es" target="_blank">
                 <img src="images/logo_udg.png" alt="" class="w-[200px] m-auto mb-[50px]">
             </a>
-            <article class="social-wrapper flex items-center justify-between mb-10 md:justify-center md:gap-20 md:mb-0">
+            <article class="social-wrapper flex items-center justify-between mb-10 md:justify-center md:gap-20 md:mb-0 z-10 relative">
                 <a href="https://www.facebook.com/profile.php?id=61556405097413" target="_blank">
                     <svg class="w-10" style="fill:white" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="OUTLINE_copy_2"><g> <path d="M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16s16-7.164,16-16S24.836,0,16,0z M19.488,15.999h-2.239v8.124h-3.357V16h-1.677    v-2.8h1.677v-1.681c0-2.284,0.947-3.642,3.637-3.642h2.24v2.8h-1.4c-1.047,0-1.117,0.392-1.117,1.121L17.249,13.2h2.536    L19.488,15.999z"></path> </g> </g> </svg>                </a>
                 <a href="https://www.instagram.com/ctcusur/" target="_blank">

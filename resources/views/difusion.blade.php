@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="my-[250px] mb-[350px] p-4 relative container" id="quienes-somos">
+    <section class="my-[200px] md:my-[250px] md:mb-[200px] p-4 relative container" id="quienes-somos">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold text-center">Medios de difusión</h1>
         
         <a href="https://www.facebook.com/teatrosurzapotlan" target="_blank" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-auto mb-10">

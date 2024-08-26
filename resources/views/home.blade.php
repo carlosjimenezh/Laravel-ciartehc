@@ -1,21 +1,21 @@
 <x-app-layout>
     <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-[750px] mx-auto" id="quienes-somos">
-        <h1 class="text-5xl mb-10 font-bold">¿Quiénes somos?</h1>
+        <h1 class="text-3xl md:text-5xl mb-10 font-bold">¿Quiénes somos?</h1>
         <p class="mb-3 text-pretty">
             Espacio diseñado para realizar <strong>investigación de alto nivel</strong>, articulando esfuerzo en el eje de docencia a nivel pregrado y posgrado, a la vez que contribuirá al fortalecimiento de actividades de <strong>divulgación, extensión, vinculación y difusión.</strong>
         </p>
         <p class="text-pretty">
             Ofrecerá de manera permanente <strong>diplomados, cursos y talleres</strong> para todas aquellas personas que deseen actualizar sus saberes y pretendan introducirse paulatinamente en las disciplinas de las <strong>artes, las humanidades y la comunicación.</strong> Dado a su carácter regional, nacional e internacional, realizará eventos donde se promueva el intercambio de experiencias, reflexiones, análisis, discusiones y aportes sobre temas esenciales que den vida a propuestas relacionadas con las <strong>artes, las humanidades y la comunicación.</strong>
         </p>
-        <img src="images/1.png" alt="" class="absolute w-[60px] bottom-[-100px] left-[-20px]">
-        <img src="images/3.png" alt="" class="absolute w-[60px] bottom-[-100px] left-[30%]">
-        <img src="images/2.svg" alt="" class="absolute w-[60px] bottom-[-100px] right-[30%]">
-        <img src="images/4.svg" alt="" class="absolute w-[60px] bottom-[-100px] right-[-20px]">
+        <img src="images/1.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] left-0 md:left-[-20px]">
+        <img src="images/3.png" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] left-[30%] md:left-[30%]">
+        <img src="images/2.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] right-[30%] md:right-[30%]">
+        <img src="images/4.svg" alt="" class="absolute w-[45px] md:w-[60px] bottom-[-100px] right-0 md:right-[-20px]">
     </section>
 
 
     <section class="my-[250px] mb-[350px] p-4 relative text-center max-w-5xl mx-auto">
-        <h1 class="text-5xl mb-10 font-bold">Noticias</h1>
+        <h1 class="text-3xl md:text-5xl mb-10 font-bold">Noticias</h1>
         <div class="swiper h-80 md:h-[550px]">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -45,9 +45,9 @@
 
 
     <section class="text-center mx-auto" id="difusion">
-        <h1 class="text-5xl mb-10 font-bold">Difusión</h1>
-        <div class="max-w-[800px] mt-10 m-auto p-4 grid grid-cols-2 gap-5">
-            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <h1 class="text-3xl md:text-5xl mb-10 font-bold">Difusión</h1>
+        <div class="max-w-[800px] mt-10 m-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center md:place-items-stretch">
+            <div class="max-w-lg md:max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
                 </svg>
@@ -62,7 +62,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-lg md:max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
                 </svg>
@@ -77,7 +77,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-lg md:max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
                 </svg>
@@ -92,7 +92,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-lg md:max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
                 </svg>
@@ -112,9 +112,9 @@
 
 
     <section id="equipo" class="text-center max-w-[1300px] mx-auto p-4 my-[250px]">
-        <h1 class="text-5xl mb-10 font-bold">Equipo</h1>
+        <h1 class="text-3xl md:text-5xl mb-10 font-bold">Equipo</h1>
         <!-- usuario -->
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <article data-id={id} class="p-2 transition-transform cursor-pointer">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative bg-[#8f993e]" src="images/equipo/jorge.png" alt="">
                 <p class="p-2 font-bold leading-tight text-sm">Dr. Jorge Arturo Martínez Ibarra</p>

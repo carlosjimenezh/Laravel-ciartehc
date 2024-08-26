@@ -89,7 +89,9 @@
 <div id="collapsing-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-    <img class="absolute bottom-4 w-40 right-1/2 translate-x-1/2" src="/images/logo.png" alt="">
+    <a href="/">
+        <img class="absolute bottom-4 w-40 right-1/2 translate-x-1/2" src="/images/logo.png" alt="">
+    </a>
     <div class="flex items-center justify-end">
         <button id="close-collapsing-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">

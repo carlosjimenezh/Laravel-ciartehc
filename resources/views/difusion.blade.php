@@ -1,6 +1,6 @@
 <x-app-layout>
     <section class="my-[250px] mb-[350px] p-4 relative container" id="quienes-somos">
-        <h1 class="text-5xl mb-10 font-bold text-center">Medios de difusión</h1>
+        <h1 class="text-3xl md:text-5xl mb-10 font-bold text-center">Medios de difusión</h1>
         
         <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-auto mb-10">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/bg-teatro.jpg" alt="">

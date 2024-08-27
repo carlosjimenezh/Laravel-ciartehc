@@ -9,17 +9,23 @@ class Team extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nombre',
-        'cargo',
-        'prefijo',
-        'ubicacion',
-        'telefono',
-        'extension',
-        'email',
-        'imagen',
-        'semblanza',
-        'cv',
-        'activo'
-    ];
+    // protected $fillable = [
+    //     'nombre',
+    //     'cargo',
+    //     'prefijo',
+    //     'ubicacion',
+    //     'telefono',
+    //     'extension',
+    //     'email',
+    //     'imagen',
+    //     'semblanza',
+    //     'cv',
+    //     'activo'
+    // ];
+
+    protected function casts () :array {
+        return [
+            'activo' => 'boolean'
+        ];
+    }
 }

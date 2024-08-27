@@ -19,7 +19,20 @@ class TeamController extends Controller
     }
 
     function store (Request $request) {
-        Team::create($request->all());
+        // Team::create($request->all());
+        $team = new Team();
+        $team->nombre = $request->nombre;
+        $team->cargo = $request->cargo;
+        $team->prefijo = $request->prefijo;
+        $team->ubicacion = $request->ubicacion;
+        $team->telefono = $request->telefono;
+        $team->extension = $request->extension;
+        $team->email = $request->email;
+        $team->imagen = $request->imagen;
+        $team->semblanza = $request->semblanza;
+        $team->cv = $request->cv;
+        $team->activo = $request->filled('activo');
+        $team->save();
         return redirect('/team');
     }
 
@@ -30,15 +43,31 @@ class TeamController extends Controller
         ]);
     }
 
-    function edit () {
-        return view('team.edit');
+    function edit (string $id) {
+        $team = Team::find($id);
+        return view('team.edit', ['team' => $team]);
     }
 
-    function update () {
-
+    function update (Request $request, string $id) {
+        $team = Team::find($id);
+        $team->nombre = $request->nombre;
+        $team->cargo = $request->cargo;
+        $team->prefijo = $request->prefijo;
+        $team->ubicacion = $request->ubicacion;
+        $team->telefono = $request->telefono;
+        $team->extension = $request->extension;
+        $team->email = $request->email;
+        $team->imagen = $request->imagen;
+        $team->semblanza = $request->semblanza;
+        $team->cv = $request->cv;
+        $team->activo = $request->filled('activo');
+        $team->save();
+        return redirect('/team');
     }
 
-    function destroy () {
-
+    function destroy (string $id) {
+        $team = Team::find($id);
+        $team->delete();
+        return redirect('/team');
     }
 }

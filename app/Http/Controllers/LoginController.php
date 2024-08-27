@@ -22,4 +22,8 @@ class LoginController extends Controller
             'email' => 'error en las credenciales'
         ])->onlyInput('email');
     }
+
+    public function index () {
+        return view('login');
+    }
 }

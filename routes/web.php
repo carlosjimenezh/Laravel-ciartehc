@@ -17,15 +17,14 @@ Route::get('/productos', [ProductosController::class, 'index']);
 Route::get('/productos/{id}', [ProductosController::class, 'show']);
 
 
-Route::get('/login', function() {
-    return view('login');
-})->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('eventos', EventosController::class);
     Route::resource('team', TeamController::class);
     Route::post('/logout', [LogoutController::class, 'logout']);
+    Route::get('/admin', [EventosController::class, 'index'])->name('dashboard');
 });
 // Route::get('/eventos', [EventosController::class, 'index']);
 // Route::get('/eventos/create', [EventosController::class, 'create']);

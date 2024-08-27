@@ -1,8 +1,4 @@
 <x-admin.app-layout>
-    @error('email')
-        {{$message}}
-    @enderror
-    {{Auth::user()}}
     <h1 class="text-base font-semibold leading-7 text-gray-900">login</h1>
     <form action="/login" method="POST">
         @csrf

@@ -50,7 +50,7 @@
                         {{$elemento->email }}
                     </td>
                     <td class="py-3">
-                        {{$elemento->semblanza }}
+                        {{Str::limit($elemento->semblanza, 50)}}
                     </td>
                     <td class="py-3">
                         {{$elemento->cv }}

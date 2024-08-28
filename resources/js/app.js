@@ -1,4 +1,4 @@
-import "./bootstrap";
+// import "./bootstrap";
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -48,7 +48,7 @@ document
     });
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
         document.querySelector("#header")?.classList.add("scrolled");
     } else {
         document.querySelector("#header")?.classList.remove("scrolled");

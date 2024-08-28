@@ -19,6 +19,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $user = new User();
+        $user->name = 'Prueba';
+        $user->email = 'prueba@gmail.com';
+        $user->password = '$2y$10$xloGoDNPQViQyFFVEqnA3e7mdf6aBJiogQKHT1aWSU4yUCVHnnI7u';
+        $user->save();
+
         $this->call([
             LineasInvestigacionSeeder::class,
             TeamSeeder::class,

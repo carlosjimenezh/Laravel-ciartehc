@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\EventosController;
+use App\Http\Controllers\LineasInvestigacionController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProductosAdminController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\SeccionesInvestigacionController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +26,11 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('eventos', EventosController::class);
     Route::resource('team', TeamController::class);
+    Route::resource('lineas-investigacion', LineasInvestigacionController::class)->only([
+        'index', 'update', 'edit'
+    ]);
+    Route::resource('productos-admin', ProductosAdminController::class);
+    Route::resource('secciones-investigacion', SeccionesInvestigacionController::class);
     Route::post('/logout', [LogoutController::class, 'logout']);
     Route::get('/admin', [EventosController::class, 'index'])->name('dashboard');
 });

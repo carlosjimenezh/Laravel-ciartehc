@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('ubicacion');
             $table->string('telefono');
             $table->string('extension')->nullable();
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('imagen')->nullable();
             $table->text('semblanza')->nullable();
             $table->string('cv')->nullable();

@@ -7,7 +7,7 @@
         </div>
     </div>
     @if (count($team) > 0 )
-        <table class="table-auto w-full rounded">
+        <table class="table-auto w-full rounded text-xs text-left">
             <thead class="bg-gray-100">
                 <tr class="border-b">
                     <th class="py-3">Prefijo</th>

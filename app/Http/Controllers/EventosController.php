@@ -32,7 +32,8 @@ class EventosController extends Controller
     {
 
         $request->validate([
-            'titulo' => 'required|max:255'
+            'titulo' => 'required|max:255',
+            'activo' => 'required',
         ]);
         $evento = new Evento();
         $evento->titulo = $request->titulo;
@@ -53,7 +54,8 @@ class EventosController extends Controller
     function update (Request $request, string $id)
     {
         $request->validate([
-            'titulo' => 'required|max:255'
+            'titulo' => 'required|max:255',
+            'activo' => 'required'
         ]);
         $evento = Evento::find($id);
         $evento->titulo = $request->titulo;

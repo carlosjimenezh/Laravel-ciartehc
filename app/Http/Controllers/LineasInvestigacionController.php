@@ -22,6 +22,10 @@ class LineasInvestigacionController extends Controller
         ]);
     }
     function update (Request $request, string $id) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'descripcion' => 'required'
+        ]);
         $lineas_investigacion = LineasInvestigacion::find($id);
         $lineas_investigacion->nombre = $request->nombre;
         $lineas_investigacion->descripcion = $request->descripcion;

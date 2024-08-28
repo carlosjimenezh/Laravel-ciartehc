@@ -5,11 +5,14 @@
         @csrf
         <label for="nombre" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Título
-            <input type="text" name="nombre" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">
+            <input value="{{old('nombre')}}" type="text" name="nombre" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">
+            @error('nombre')
+                <p class="absolute text-xs text-red-600 dark:text-red-400">{{$message}}</p>
+            @enderror
         </label>
         <label for="descripcion" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Descripción
-            <textarea name="descripcion" cols="30" rows="10" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block"></textarea>
+            <textarea name="descripcion" cols="30" rows="10" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">{{old('descripcion')}}</textarea>
         </label>
         <label for="seccion_investigacion" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Seccino de línea de investigación
@@ -19,10 +22,16 @@
                     <option value="{{$seccion->id}}">{{$seccion->nombre}}</option>
                 @endforeach
             </select>
+            @error('seccion_investigacion')
+                <p class="absolute text-xs text-red-600 dark:text-red-400">{{$message}}</p>
+            @enderror
         </label>
         <label for="activo" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Activo
             <input type="checkbox" name="activo" checked>
+            @error('activo')
+                <p class="absolute text-xs text-red-600 dark:text-red-400">{{$message}}</p>
+            @enderror
         </label>
         <input type="submit" value="Guardar" class="mr-1 rounded-md bg-[#232943] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#C8DED3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8DED3]">
         <a 

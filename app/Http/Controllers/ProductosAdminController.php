@@ -24,6 +24,11 @@ class ProductosAdminController extends Controller
         return view('productos.create', ['seccion_investigacion' => $seccion_investigacion]);
     }
     function store (Request $request) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'activo' => 'required',
+            'seccion_investigacion' => 'required|numeric|gt:0'
+        ]);
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
@@ -41,6 +46,11 @@ class ProductosAdminController extends Controller
         ]);
     }
     function update (Request $request, string $id) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'activo' => 'required',
+            'seccion_investigacion' => 'required|numeric|gt:0'
+        ]);
         $producto = Producto::find($id);
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;

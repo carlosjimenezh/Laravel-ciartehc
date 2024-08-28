@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->longText('descripcion');
+            $table->longText('descripcion')->nullable();
             $table->string('imagen')->nullable();
             $table->boolean('activo')->default(true);
             $table->unsignedBigInteger('seccion_lineas_investigacion_id');

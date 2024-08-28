@@ -19,6 +19,14 @@ class TeamController extends Controller
     }
 
     function store (Request $request) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'cargo' => 'required|max:255',
+            'ubicacion' => 'required|max:255',
+            'telefono' => 'required|max:255',
+            'activo' => 'required',
+        ]);
+
         // Team::create($request->all());
         $team = new Team();
         $team->nombre = $request->nombre;
@@ -49,6 +57,13 @@ class TeamController extends Controller
     }
 
     function update (Request $request, string $id) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'cargo' => 'required|max:255',
+            'ubicacion' => 'required|max:255',
+            'telefono' => 'required|max:255',
+            'activo' => 'required',
+        ]);
         $team = Team::find($id);
         $team->nombre = $request->nombre;
         $team->cargo = $request->cargo;

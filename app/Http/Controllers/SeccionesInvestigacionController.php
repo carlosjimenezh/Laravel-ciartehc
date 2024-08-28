@@ -26,6 +26,10 @@ class SeccionesInvestigacionController extends Controller
         ]);
     }
     function store (Request $request) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'lineas_investigacion' => 'required|numeric|gt:0'
+        ]);
         $secciones_investigacion = new SeccionesInvestigacion();
         $secciones_investigacion->nombre = $request->nombre;
         $secciones_investigacion->lineas_investigacion_id = $request->lineas_investigacion;
@@ -41,6 +45,10 @@ class SeccionesInvestigacionController extends Controller
         ]);
     }
     function update (Request $request, string $id) {
+        $request->validate([
+            'nombre' => 'required|max:255',
+            'lineas_investigacion' => 'required|numeric|gt:0'
+        ]);
         $secciones_investigacion = SeccionesInvestigacion::find($id);
         $secciones_investigacion->nombre = $request->nombre;
         $secciones_investigacion->lineas_investigacion_id = $request->lineas_investigacion;

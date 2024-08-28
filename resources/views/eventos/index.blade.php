@@ -35,7 +35,7 @@
                         {{$evento->activo}}
                     </td>
                     <td class="py-3">
-                        <form action="/eventos/{{$evento->id}}" method="POST">
+                        <form class="eliminar" action="/eventos/{{$evento->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600">Eliminar</button>

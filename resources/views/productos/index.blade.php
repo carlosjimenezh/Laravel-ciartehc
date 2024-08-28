@@ -35,7 +35,7 @@
                         {{$producto->activo}}
                     </td>
                     <td class="py-3">
-                        <form action="/productos-admin/{{$producto->id}}" method="POST">
+                        <form class="eliminar" action="/productos-admin/{{$producto->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600">Eliminar</button>

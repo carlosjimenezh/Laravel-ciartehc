@@ -27,7 +27,7 @@
                         {{$secciones->lineas_investigacion_id}}
                     </td>
                     <td class="py-3">
-                        <form action="/secciones-investigacion/{{$secciones->id}}" method="POST">
+                        <form class="eliminar" action="/secciones-investigacion/{{$secciones->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600">Eliminar</button>

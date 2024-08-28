@@ -59,7 +59,7 @@
                         {{$elemento->activo}}
                     </td>
                     <td class="py-3">
-                        <form action="/team/{{$elemento->id}}" method="POST">
+                        <form class="eliminar" action="/team/{{$elemento->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600">Eliminar</button>

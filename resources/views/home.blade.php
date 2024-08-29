@@ -20,16 +20,15 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
-                    <img src="images/bg-teatro.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
-                </div>
-                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
-                    <img src="images/bg-radio.jpg" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center">
-                </div>
-                <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
-                    {{-- <img src="images/bg-teatro.jpg" alt=""> --}}
-                    slide
-                </div>
+                @forelse ($eventos as $evento)
+                    <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="{{$evento->imagen}}" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
+                    </div>
+                @empty
+                    <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <h2>No hay elementos que mostrar</h2>
+                    </div>    
+                @endforelse
             </div>
             <!-- poner un recordatorio en admin diciendo que las imágenes aparecen centradas, para mostrar la información centrada -->
           

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Evento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventosController extends Controller
 {
@@ -30,15 +31,20 @@ class EventosController extends Controller
 
     function store (Request $request)
     {
-
         $request->validate([
             'titulo' => 'required|max:255',
             'activo' => 'required',
+            'file' => 'image|max:2048'
         ]);
+        $url_imagen = '';
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen')->store('public/eventos');
+            $url_imagen = Storage::url($imagen);
+        }
         $evento = new Evento();
         $evento->titulo = $request->titulo;
         $evento->fecha_evento = $request->fecha;
-        $evento->imagen = $request->imagen;
+        $evento->imagen = $url_imagen;
         $evento->url = $request->link;
         $evento->activo = $request->filled('activo');
         $evento->save();
@@ -55,12 +61,20 @@ class EventosController extends Controller
     {
         $request->validate([
             'titulo' => 'required|max:255',
-            'activo' => 'required'
+            'activo' => 'required',
+            'file' => 'image|max:2048'
         ]);
         $evento = Evento::find($id);
+        $url_imagen = $evento->imagen;
+        if ($request->hasFile('imagen')) {
+            $imagen_url = str_replace('storage', 'public', $evento->imagen);
+            Storage::delete($imagen_url);
+            $imagen = $request->file('imagen')->store('public/eventos');
+            $url_imagen = Storage::url($imagen);
+        }
         $evento->titulo = $request->titulo;
         $evento->fecha_evento = $request->fecha;
-        $evento->imagen = $request->imagen;
+        $evento->imagen = $url_imagen;
         $evento->url = $request->link;
         $evento->activo = $request->filled('activo');
         $evento->save();
@@ -70,6 +84,8 @@ class EventosController extends Controller
     function destroy (string $id)
     {
         $evento = Evento::find($id);
+        $imagen_url = str_replace('storage', 'public', $evento->imagen);
+        Storage::delete($imagen_url);
         $evento->delete();
         return redirect('/eventos');
     }

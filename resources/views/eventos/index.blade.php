@@ -10,6 +10,7 @@
         <table class="table-auto w-full rounded text-xs text-left">
             <thead class="bg-gray-100">
                 <tr class="border-b">
+                    <th class="py-3">Imagen</th>
                     <th class="py-3">Titulo</th>
                     <th class="py-3">Fecha</th>
                     <th class="py-3">Link evento</th>
@@ -20,6 +21,11 @@
             <tbody>
                 @foreach ($eventos as $evento)
                 <tr class="border-b">
+                    <td class="py-3">
+                        <a href="/eventos/{{$evento->id}}/edit">
+                            <img src="{{$evento->imagen}}" alt="" width="50px">
+                        </a>
+                    </td>
                     <td class="py-3">
                         <a href="/eventos/{{$evento->id}}/edit">
                             {{$evento->titulo}}

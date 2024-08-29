@@ -1,7 +1,7 @@
 <x-admin.app-layout>
     <h2 class="text-base font-semibold leading-7 text-gray-900">Nuevo evento</h2>
     <p class="mt-1 text-sm leading-6 text-gray-600">Los nuevos eventos son mostrados automáticamente, si no desea mostrarlos desmarque la casilla 'activo'.</p>
-    <form action="/eventos" method="POST" name="eventos" id="eventos" class="mt-8">
+    <form action="/eventos" method="POST" name="eventos" id="eventos" class="mt-8" enctype="multipart/form-data">
         @csrf
         <label for="titulo" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Título
@@ -20,7 +20,10 @@
         </label>
         <label for="imagen" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Imagen
-            <input type="file" name="imagen" id="imagen" accept="image" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-[200px] w-full block">
+            <input accept="image/png, image/jpeg, image/jpg" type="file" name="imagen" id="imagen" accept="image" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-[200px] w-full block">
+            @error('imagen')
+                <p class="absolute text-xs text-red-600 dark:text-red-400">{{$message}}</p>
+            @enderror
         </label>
         <label for="activo" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Activo

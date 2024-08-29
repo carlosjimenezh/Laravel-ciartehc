@@ -24,7 +24,7 @@
                         </a>
                     </td>
                     <td class="py-3">
-                        {{$secciones->lineas_investigacion_id}}
+                        {{$secciones->linea_investigacion->nombre}}
                     </td>
                     <td class="py-3">
                         <form class="eliminar" action="/secciones-investigacion/{{$secciones->id}}" method="POST">

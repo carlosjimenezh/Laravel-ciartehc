@@ -11,7 +11,7 @@ class SeccionesInvestigacionController extends Controller
     //
     function index () {
         //show, create, store, edit, update, destroy
-        $secciones_investigacion = SeccionesInvestigacion::all();
+        $secciones_investigacion = SeccionesInvestigacion::with('linea_investigacion')->get();
         return view('secciones_investigacion.index', [
             'secciones_investigacion' => $secciones_investigacion,
         ]);

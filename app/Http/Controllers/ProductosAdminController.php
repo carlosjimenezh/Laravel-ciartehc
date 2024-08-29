@@ -11,7 +11,7 @@ class ProductosAdminController extends Controller
     //
     function index () {
         //show, create, store, edit, update, destroy
-        $productos = Producto::all();
+        $productos = Producto::with('seccion_investigacion')->get();
         return view('productos.index', [
             'productos' => $productos
         ]);

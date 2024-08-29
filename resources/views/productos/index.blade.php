@@ -29,7 +29,7 @@
                         {{Str::limit($producto->descripcion, 50)}}
                     </td>
                     <td class="py-3">
-                        {{$producto->seccion_lineas_investigacion_id}}
+                        {{$producto->seccion_investigacion->nombre}}
                     </td>
                     <td class="py-3">
                         {{$producto->activo}}

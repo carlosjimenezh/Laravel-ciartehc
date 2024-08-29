@@ -35,16 +35,18 @@
         <div class="p-4">
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
             <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 3.75a1.5 1.5 0 00-1.5 1.5v14a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H4.5zM6 6h12v12H6V6zm4.5 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-2 6h8v2H8v-2z"/>
                 </svg>
             </div>
             <div class="flex-auto">
                 <a href="#" class="block font-semibold text-gray-900">
-                Artes, Humanidades y Desarrollo Cultural
+                    {{$lineas_investigacion[0]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                <p class="mt-1 text-gray-600">
+                    {{$lineas_investigacion[0]->descripcion}}
+                </p>
             </div>
             </div>
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
@@ -55,10 +57,12 @@
             </div>
             <div class="flex-auto">
                 <a href="#" class="block font-semibold text-gray-900">
-                Identidad Cultural y Comunicación
+                    {{$lineas_investigacion[1]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-gray-600">Speak directly to your customers</p>
+                <p class="mt-1 text-gray-600">
+                    {{$lineas_investigacion[1]->descripcion}}
+                </p>
             </div>
             </div>
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
@@ -69,10 +73,12 @@
             </div>
             <div class="flex-auto">
                 <a href="#" class="block font-semibold text-gray-900">
-                Procesos Socioculturales y Desarrollo Comunitario
+                    {{$lineas_investigacion[2]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-gray-600">Your customers’ data will be safe and secure</p>
+                <p class="mt-1 text-gray-600">
+                    {{$lineas_investigacion[2]->descripcion}}
+                </p>
             </div>
             </div>
         </div>
@@ -115,9 +121,15 @@
             </button>
             <!-- 'Product' sub-menu, show/hide based on menu state. -->
             <div class="mt-2 space-y-2" id="disclosure-1">
-                <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Artes, Humanidades y Desarrollo Cultural</a>
-                <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Identidad Cultural y Comunicación</a>
-                <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Procesos Socioculturales y Desarrollo Comunitario</a>
+                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    {{$lineas_investigacion[0]->nombre}}
+                </a>
+                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    {{$lineas_investigacion[1]->nombre}}
+                </a>
+                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    {{$lineas_investigacion[1]->nombre}}
+                </a>
             </div>
             </div>
             <a href="/productos" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Productos</a>

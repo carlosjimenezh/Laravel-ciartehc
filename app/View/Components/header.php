@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\LineasInvestigacion;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,9 @@ class header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.header');
+        $lineas_investigacion = LineasInvestigacion::all();
+        return view('components.header', [
+            'lineas_investigacion' => $lineas_investigacion
+        ]);
     }
 }

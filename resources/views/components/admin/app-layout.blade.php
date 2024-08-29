@@ -31,12 +31,12 @@
           </div>
           @endauth
           <div class="hidden lg:flex lg:gap-x-12">
-            @auth              
-            <a href="/eventos" class="text-sm font-semibold leading-6 text-gray-900">Eventos</a>
-            <a href="/team" class="text-sm font-semibold leading-6 text-gray-900">Equipo</a>
-            <a href="/productos-admin" class="text-sm font-semibold leading-6 text-gray-900">Productos</a>
-            <a href="/lineas-investigacion" class="text-sm font-semibold leading-6 text-gray-900">Lineas de investigación</a>
-            <a href="/secciones-investigacion" class="text-sm font-semibold leading-6 text-gray-900">Secciones investigación</a>
+            @auth  
+            <a href="/eventos" class="{{request()->is('eventos*') ? 'text-red-800' : 'text-gray-900'}} text-sm font-semibold leading-6">Eventos</a>
+            <a href="/team" class="{{request()->is('team*') ? 'text-red-800' : 'text-gray-900'}} text-sm font-semibold leading-6">Equipo</a>
+            <a href="/productos-admin" class="{{request()->is('productos-admin*') ? 'text-red-800' : 'text-gray-900'}} text-sm font-semibold leading-6">Productos</a>
+            <a href="/lineas-investigacion" class="{{request()->is('lineas-investigacion*') ? 'text-red-800' : 'text-gray-900'}} text-sm font-semibold leading-6">Lineas de investigación</a>
+            <a href="/secciones-investigacion" class="{{request()->is('secciones-investigacion*') ? 'text-red-800' : 'text-gray-900'}} text-sm font-semibold leading-6">Secciones investigación</a>
             @endauth
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -55,10 +55,10 @@
           <div class="fixed inset-0 z-10"></div>
           <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
+              <span class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
+                <h1>Admin</h1>
+              </span>
               <button id="close-collapsing-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -69,11 +69,11 @@
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <a href="/eventos" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Eventos</a>
-                  <a href="/team" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Equipo</a>
-                  <a href="/productos-admin" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Productos</a>
-                  <a href="/lineas-investigacion" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Lineas de investigación</a>
-                  <a href="/secciones-investigacion" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Secciones investigación</a>
+                  <a href="/eventos" class="{{request()->is('eventos*') ? 'text-red-800' : 'text-gray-900'}} -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50">Eventos</a>
+                  <a href="/team" class="{{request()->is('team*') ? 'text-red-800' : 'text-gray-900'}} -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50">Equipo</a>
+                  <a href="/productos-admin" class="{{request()->is('productos-admin*') ? 'text-red-800' : 'text-gray-900'}} -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50">Productos</a>
+                  <a href="/lineas-investigacion" class="{{request()->is('lineas-investigacion*') ? 'text-red-800' : 'text-gray-900'}} -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50">Lineas de investigación</a>
+                  <a href="/secciones-investigacion" class="{{request()->is('secciones-investigacion*') ? 'text-red-800' : 'text-gray-900'}} -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50">Secciones investigación</a>
                 </div>
                 <div class="py-6">
                   <form action="/logout" method="POST">

@@ -119,25 +119,25 @@
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">Equipo</h1>
         <!-- usuario -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <a href="/equipo#jorge" class="p-2 transition-transform">
+            <a href="/equipo#jorge" class="transition-transform">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative bg-[#8f993e]" src="images/equipo/jorge.png" alt="">
-                <p class="p-2 font-bold leading-tight text-sm">Dr. Jorge Arturo Martínez Ibarra</p>
-                <p class="p-2 text-sm">Director CIARTEHC</p>
+                <p class="mt-5 font-bold leading-tight text-sm">Dr. Jorge Arturo Martínez Ibarra</p>
+                <p class="mb-10 md:mb-0 text-sm">Director CIARTEHC</p>
             </a>
-            <a href="/equipo#rosa" class="p-2 transition-transform">
+            <a href="/equipo#rosa" class="transition-transform">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative bg-[#c2ded1]" src="images/equipo/rosa.png" alt="">
-                <p class="p-2 font-bold leading-tight text-sm">Dra. Rosa Elena Arellano Montoya</p>
-                <p class="p-2 text-sm">Profesora titular CIARTEHC</p>
+                <p class="mt-5 font-bold leading-tight text-sm">Dra. Rosa Elena Arellano Montoya</p>
+                <p class="mb-10 md:mb-0 text-sm">Profesora titular CIARTEHC</p>
             </a>
-            <a href="/equipo#edith" class="p-2 transition-transform">
+            <a href="/equipo#edith" class="transition-transform">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative bg-[#b12028]" src="images/equipo/edith.png" alt="">
-                <p class="p-2 font-bold leading-tight text-sm">Lic. Edith Rosario Covarrubias Rodríguez</p>
-                <p class="p-2 text-sm">Técnica académica CIARTEHC</p>
+                <p class="mt-5 font-bold leading-tight text-sm">Lic. Edith Rosario Covarrubias Rodríguez</p>
+                <p class="mb-10 md:mb-0 text-sm">Técnica académica CIARTEHC</p>
             </a>
-            <a href="/equipo#alonso" class="p-2 transition-transform">
+            <a href="/equipo#alonso" class="transition-transform">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative bg-[#202945]" src="images/equipo/alonso.png" alt="">
-                <p class="p-2 font-bold leading-tight text-sm">Lic. Alonso Sánchez Fabián</p>
-                <p class="p-2 text-sm">Técnico académico CIARTEHC</p>
+                <p class="mt-5 font-bold leading-tight text-sm">Lic. Alonso Sánchez Fabián</p>
+                <p class="mb-10 md:mb-0 text-sm">Técnico académico CIARTEHC</p>
             </a>
         </div>
     </section>

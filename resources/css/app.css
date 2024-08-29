@@ -31,3 +31,19 @@ header.scrolled {
     --tw-shadow-colored   : 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
     box-shadow            : var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+#equipo .grid a:nth-child(1) img {
+    background-color: #8f993e;
+}
+
+#equipo .grid a:nth-child(2) img {
+    background-color: #c2ded1;
+}
+
+#equipo .grid a:nth-child(3) img {
+    background-color: #b12028;
+}
+
+#equipo .grid a:nth-child(4) img {
+    background-color: #202945;
+}

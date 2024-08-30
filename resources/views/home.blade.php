@@ -118,7 +118,7 @@
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">Equipo</h1>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             @forelse ($equipo as $elemento)
-            <a href="/equipo#jorge" class="transition-transform">
+            <a href="/equipo#{{strtok($elemento->nombre, ' ')}}" class="transition-transform">
                 <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="{{$elemento->imagen}}" alt="">
                 <p class="mt-5 font-bold leading-tight text-sm">{{$elemento->nombre}}</p>
                 <p class="mb-10 md:mb-0 text-sm">{{$elemento->prefijo.' '.$elemento->cargo}}</p>

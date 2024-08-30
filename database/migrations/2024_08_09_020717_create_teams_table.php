@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('imagen')->nullable();
             $table->text('semblanza')->nullable();
+            $table->text('frase')->nullable();
             $table->string('cv')->nullable();
             $table->boolean('activo')->default(true);
             $table->timestamps();

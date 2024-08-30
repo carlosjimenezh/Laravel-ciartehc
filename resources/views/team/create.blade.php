@@ -51,6 +51,10 @@
             Semblanza
             <textarea name="semblanza" cols="30" rows="10" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">{{old('semblanza')}}</textarea>
         </label>
+        <label for="frase" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
+            Frase
+            <textarea name="frase" cols="30" rows="10" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">{{old('frase')}}</textarea>
+        </label>
         <label for="cv" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             C.V.
             <input type="file" name="cv" class="p-1 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-md w-full block">

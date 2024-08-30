@@ -19,6 +19,7 @@
                     <th class="py-3">Extensión</th>
                     <th class="py-3">Email</th>
                     <th class="py-3">Semblanza</th>
+                    <th class="py-3">Frase</th>
                     <th class="py-3">CV</th>
                     <th class="py-3">Activo</th>
                     <th class="py-3">&nbsp;</th>
@@ -56,7 +57,10 @@
                         {{$elemento->email }}
                     </td>
                     <td class="py-3">
-                        {{Str::limit($elemento->semblanza, 50)}}
+                        {{Str::limit($elemento->semblanza, 20)}}
+                    </td>
+                    <td class="py-3">
+                        {{Str::limit($elemento->frase, 20)}}
                     </td>
                     <td class="py-3">
                         @if (!empty($elemento->cv))

@@ -50,6 +50,7 @@ class TeamController extends Controller
         $team->email = $request->email;
         $team->imagen = $url_imagen;
         $team->semblanza = $request->semblanza;
+        $team->frase = $request->frase;
         $team->cv = $cv;
         $team->activo = $request->filled('activo');
         $team->save();
@@ -102,6 +103,7 @@ class TeamController extends Controller
         $team->email = $request->email;
         $team->imagen = $url_imagen;
         $team->semblanza = $request->semblanza;
+        $team->frase = $request->frase;
         $team->cv = $cv;
         $team->activo = $request->filled('activo');
         $team->save();

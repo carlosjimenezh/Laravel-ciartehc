@@ -28,7 +28,7 @@ class LineasInvestigacionSeeder extends Seeder
 
         $lineas = new LineasInvestigacion();
         $lineas->nombre = 'Procesos Socioculturales y Desarrollo Comunitario';
-        $lineas->decripcion = 'Examina cómo los procesos socioculturales impulsan el desarrollo de comunidades';
+        $lineas->descripcion = 'Examina cómo los procesos socioculturales impulsan el desarrollo de comunidades';
         $lineas->save();
     }
 }

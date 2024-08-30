@@ -74,7 +74,7 @@ class TeamSeeder extends Seeder
         $team->imagen = '/storage/team/alonso.png';
         $team->semblanza = '';
         $team->frase = 'La creatividad es la voz del alma; deja que tu arte hable más alto que las palabras.';
-        $team->cv = '';
+        $team->cv = '/storage/cv/alonso.pdf';
         $team->activo = true;
         $team->save();
     }

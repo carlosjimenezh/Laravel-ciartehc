@@ -26,7 +26,6 @@ class ProductosAdminController extends Controller
     function store (Request $request) {
         $request->validate([
             'nombre' => 'required|max:255',
-            'activo' => 'required',
             'seccion_investigacion' => 'required|numeric|gt:0'
         ]);
         $producto = new Producto();
@@ -48,7 +47,6 @@ class ProductosAdminController extends Controller
     function update (Request $request, string $id) {
         $request->validate([
             'nombre' => 'required|max:255',
-            'activo' => 'required',
             'seccion_investigacion' => 'required|numeric|gt:0'
         ]);
         $producto = Producto::find($id);

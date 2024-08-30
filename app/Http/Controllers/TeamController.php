@@ -25,7 +25,6 @@ class TeamController extends Controller
             'cargo' => 'required|max:255',
             'ubicacion' => 'required|max:255',
             'telefono' => 'required|max:255',
-            'activo' => 'required',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'cv' => 'nullable|mimes:pdf'
         ]);
@@ -75,7 +74,6 @@ class TeamController extends Controller
             'cargo' => 'required|max:255',
             'ubicacion' => 'required|max:255',
             'telefono' => 'required|max:255',
-            'activo' => 'required',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'cv' => 'nullable|mimes:pdf'
         ]);

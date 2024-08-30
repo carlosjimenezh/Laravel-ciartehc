@@ -33,7 +33,6 @@ class EventosController extends Controller
     {
         $request->validate([
             'titulo' => 'required|max:255',
-            'activo' => 'required',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $url_imagen = '';
@@ -59,10 +58,8 @@ class EventosController extends Controller
 
     function update (Request $request, string $id)
     {
-        return dd($request->file('imagen'));
         $request->validate([
             'titulo' => 'required|max:255',
-            'activo' => 'required',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $evento = Evento::find($id);

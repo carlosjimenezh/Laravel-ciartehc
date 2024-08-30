@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LineasInvestigacionController;
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/difusion', function() {return view('difusion');});
-Route::get('/equipo', function() {return view('equipo');});
+Route::get('/equipo', [EquipoController::class, 'index']);
+Route::get('/equipo/{id}', [EquipoController::class, 'show']);
 Route::get('/productos', [ProductosController::class, 'index']);
 Route::get('/productos/{id}', [ProductosController::class, 'show']);
 

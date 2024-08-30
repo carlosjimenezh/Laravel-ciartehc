@@ -116,28 +116,16 @@
 
     <section id="equipo" class="text-center max-w-[1300px] mx-auto p-4 my-[200px] md:my-[250px]">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold">Equipo</h1>
-        <!-- usuario -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            @forelse ($equipo as $elemento)
             <a href="/equipo#jorge" class="transition-transform">
-                <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="images/equipo/jorge.png" alt="">
-                <p class="mt-5 font-bold leading-tight text-sm">Dr. Jorge Arturo Martínez Ibarra</p>
-                <p class="mb-10 md:mb-0 text-sm">Director CIARTEHC</p>
+                <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="{{$elemento->imagen}}" alt="">
+                <p class="mt-5 font-bold leading-tight text-sm">{{$elemento->nombre}}</p>
+                <p class="mb-10 md:mb-0 text-sm">{{$elemento->prefijo.' '.$elemento->cargo}}</p>
             </a>
-            <a href="/equipo#rosa" class="transition-transform">
-                <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="images/equipo/rosa.png" alt="">
-                <p class="mt-5 font-bold leading-tight text-sm">Dra. Rosa Elena Arellano Montoya</p>
-                <p class="mb-10 md:mb-0 text-sm">Profesora titular CIARTEHC</p>
-            </a>
-            <a href="/equipo#edith" class="transition-transform">
-                <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="images/equipo/edith.png" alt="">
-                <p class="mt-5 font-bold leading-tight text-sm">Lic. Edith Rosario Covarrubias Rodríguez</p>
-                <p class="mb-10 md:mb-0 text-sm">Técnica académica CIARTEHC</p>
-            </a>
-            <a href="/equipo#alonso" class="transition-transform">
-                <img class="inline-block h-[250px] w-[250px] rounded-full object-contain relative" src="images/equipo/alonso.png" alt="">
-                <p class="mt-5 font-bold leading-tight text-sm">Lic. Alonso Sánchez Fabián</p>
-                <p class="mb-10 md:mb-0 text-sm">Técnico académico CIARTEHC</p>
-            </a>
+            @empty
+                <p>No existen elemento por mostrar</p>
+            @endforelse
         </div>
     </section>
 

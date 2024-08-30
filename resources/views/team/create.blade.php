@@ -1,7 +1,7 @@
 <x-admin.app-layout>
     <h1 class="text-base font-semibold leading-7 text-gray-900">Nuevo miembro team</h1>
     <p class="mt-1 text-sm leading-6 text-gray-600">Los nuevos eventos son mostrados automáticamente, si no desea mostrarlos desmarque la casilla 'activo'.</p>
-    <form action="/team" method="POST" class="mt-8">
+    <form action="/team" method="POST" class="mt-8" enctype="multipart/form-data">
         @csrf
         <label for="nombre" class="block text-sm font-medium leading-6 text-gray-900 mb-5">
             Nombre

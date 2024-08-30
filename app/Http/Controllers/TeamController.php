@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TeamController extends Controller
 {
@@ -25,8 +26,19 @@ class TeamController extends Controller
             'ubicacion' => 'required|max:255',
             'telefono' => 'required|max:255',
             'activo' => 'required',
+            'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'cv' => 'nullable|mimes:pdf'
         ]);
-
+        $url_imagen = '';
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen')->store('public/team');
+            $url_imagen = Storage::url($imagen);
+        }
+        $cv = '';
+        if ($request->hasFile('cv')) {
+            $file = $request->file('cv')->store('public/cv');
+            $cv = Storage::url($file);
+        }
         // Team::create($request->all());
         $team = new Team();
         $team->nombre = $request->nombre;
@@ -36,9 +48,9 @@ class TeamController extends Controller
         $team->telefono = $request->telefono;
         $team->extension = $request->extension;
         $team->email = $request->email;
-        $team->imagen = $request->imagen;
+        $team->imagen = $url_imagen;
         $team->semblanza = $request->semblanza;
-        $team->cv = $request->cv;
+        $team->cv = $cv;
         $team->activo = $request->filled('activo');
         $team->save();
         return redirect('/team');
@@ -63,8 +75,24 @@ class TeamController extends Controller
             'ubicacion' => 'required|max:255',
             'telefono' => 'required|max:255',
             'activo' => 'required',
+            'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'cv' => 'nullable|mimes:pdf'
         ]);
         $team = Team::find($id);
+        $url_imagen = $team->imagen;
+        if ($request->hasFile('imagen')) {
+            $imagen_url = str_replace('storage', 'public', $team->imagen);
+            Storage::delete($imagen_url);
+            $imagen = $request->file('imagen')->store('public/team');
+            $url_imagen = Storage::url($imagen);
+        }
+        $cv = '';
+        if ($request->hasFile('cv')) {
+            $file_url = str_replace('storage','public',$team->cv);
+            Storage::delete($file_url);
+            $file = $request->file('cv')->store('public/cv');
+            $cv = Storage::url($file);
+        }
         $team->nombre = $request->nombre;
         $team->cargo = $request->cargo;
         $team->prefijo = $request->prefijo;
@@ -72,9 +100,9 @@ class TeamController extends Controller
         $team->telefono = $request->telefono;
         $team->extension = $request->extension;
         $team->email = $request->email;
-        $team->imagen = $request->imagen;
+        $team->imagen = $url_imagen;
         $team->semblanza = $request->semblanza;
-        $team->cv = $request->cv;
+        $team->cv = $cv;
         $team->activo = $request->filled('activo');
         $team->save();
         return redirect('/team');
@@ -82,6 +110,10 @@ class TeamController extends Controller
 
     function destroy (string $id) {
         $team = Team::find($id);
+        $imagen_url = str_replace('storage', 'public', $team->imagen);
+        Storage::delete($imagen_url);
+        $file_url = str_replace('storage', 'public', $team->cv);
+        Storage::delete($file_url);
         $team->delete();
         return redirect('/team');
     }

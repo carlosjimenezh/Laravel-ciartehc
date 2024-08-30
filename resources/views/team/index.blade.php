@@ -10,6 +10,7 @@
         <table class="table-auto w-full rounded text-xs text-left">
             <thead class="bg-gray-100">
                 <tr class="border-b">
+                    <th class="py-3">Imagen</th>
                     <th class="py-3">Prefijo</th>
                     <th class="py-3">Nombre</th>
                     <th class="py-3">Cargo</th>
@@ -26,6 +27,11 @@
             <tbody>
                 @foreach ($team as $elemento)
                 <tr class="border-b">
+                    <td class="py-3">
+                        <a href="/team/{{$elemento->id}}/edit">
+                            <img src="{{$elemento->imagen}}" alt="" width="50px">
+                        </a>
+                    </td>
                     <td class="py-3">
                         {{$elemento->prefijo }}
                     </td>
@@ -53,7 +59,9 @@
                         {{Str::limit($elemento->semblanza, 50)}}
                     </td>
                     <td class="py-3">
-                        {{$elemento->cv }}
+                        @if (!empty($elemento->cv))
+                        <a class="text-blue-700" target="_blank" href="{{$elemento->cv}}">Ver</a>                            
+                        @endif
                     </td>
                     <td class="py-3">
                         {{$elemento->activo}}

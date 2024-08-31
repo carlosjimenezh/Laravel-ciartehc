@@ -20,11 +20,11 @@
             <div class="relative">
                 <a href="/productos/{{$producto->id}}" class="block h-40 md:h-72 border border-gray-200 rounded-lg shadow">
                     <img class="object-cover w-full h-full max-w-full rounded-lg" src="{{!empty($producto->imagenes[0]) ? $producto->imagenes[0]->imagen : '/images/logo.png'}}" alt="">
-                    <div class="absolute bg-white top-2 left-2 border border-gray-700 rounded-full text-xs p-1">{{$producto->seccion_investigacion->nombre}}</div>
+                    <div class="absolute bg-white top-2 left-2 border text-gray-500 rounded-full text-xs p-1">{{$producto->seccion_investigacion->nombre}}</div>
                 </a>
                 <div class="text-center font-semibold px-1">
                     <a href="/productos/{{$producto->id}}">
-                        Título
+                        {{$producto->nombre}}
                     </a>
                 </div>
             </div>

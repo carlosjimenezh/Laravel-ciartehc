@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ImagenProducto;
 use App\Models\Producto;
 use App\Models\SeccionesInvestigacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductosAdminController extends Controller
 {
@@ -61,5 +63,63 @@ class ProductosAdminController extends Controller
         $producto = Producto::find($id);
         $producto->delete();
         return redirect('/productos-admin');
+    }
+
+    function index_imagenes (string $id) {
+        $producto = Producto::where('id', $id)->with('imagenes')->first();
+        return view('productos.index_imagenes', [
+            'producto' => $producto
+        ]);
+    }
+
+    function create_imagenes (string $id) {
+        $producto = Producto::find($id);
+        return view('productos.create_imagenes', [
+            'producto' => $producto
+        ]);
+    }
+
+    function store_imagenes (Request $request) {
+        $request->validate([
+            'producto_id' => 'required|numeric|gt:0',
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        $imagen = $request->file('imagen')->store('public/productos');
+        $url_imagen = Storage::url($imagen);
+        $imagenProducto = new ImagenProducto();
+        $imagenProducto->producto_id = $request->producto_id;
+        $imagenProducto->imagen = $url_imagen;
+        $imagenProducto->save();
+        return redirect('/productos-admin/imagenes/'.$request->producto_id);   
+    }
+
+    function edit_imagenes (string $id, string $idimagen) {
+        $imagen = ImagenProducto::where('id', $idimagen)->with('producto')->first();
+        return view('productos.edit_imagenes', [
+            'imagen' => $imagen,
+            'id' => $id
+        ]);
+    }
+
+    function update_imagenes (Request $request, string $id, string $idimagen) {
+        $request->validate([
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        $imagen = ImagenProducto::find($idimagen);
+        $imagen_url = str_replace('storage', 'public', $imagen->imagen);
+        Storage::delete($imagen_url);
+        $imagen_url = $request->file('imagen')->store('public/productos');
+        $url_imagen = Storage::url($imagen_url);
+        $imagen->imagen = $url_imagen;
+        $imagen->save();
+        return redirect('/productos-admin/imagenes/'.$id);
+    }
+
+    function destroy_imagenes (string $id, string $idimagen) {
+        $imagen = ImagenProducto::find($idimagen);
+        $imagen_url = str_replace('storage', 'public', $imagen->imagen);
+        Storage::delete($imagen_url);
+        $imagen->delete();
+        return redirect('/productos-admin/imagenes/'.$id);
     }
 }

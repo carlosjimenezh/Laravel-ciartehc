@@ -13,6 +13,7 @@
                     <th class="py-3">Título</th>
                     <th class="py-3">Descripción</th>
                     <th class="py-3">Sección</th>
+                    <th class="py-3">Imágenes</th>
                     <th class="py-3">Activo</th>
                     <th class="py-3">&nbsp;</th>
                 </tr>
@@ -30,6 +31,11 @@
                     </td>
                     <td class="py-3">
                         {{$producto->seccion_investigacion->nombre}}
+                    </td>
+                    <td class="py-3">
+                        <a href="/productos-admin/imagenes/{{$producto->id}}">
+                            ver
+                        </a>
                     </td>
                     <td class="py-3">
                         {{$producto->activo}}

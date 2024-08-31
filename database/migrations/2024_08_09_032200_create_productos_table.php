@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->longText('descripcion')->nullable();
-            $table->string('imagen')->nullable();
             $table->boolean('activo')->default(true);
             $table->unsignedBigInteger('seccion_lineas_investigacion_id');
             $table->foreign('seccion_lineas_investigacion_id')

@@ -31,6 +31,12 @@ Route::group(['middleware' => 'auth'], function () {
         'index', 'update', 'edit'
     ]);
     Route::resource('productos-admin', ProductosAdminController::class);
+    Route::get('productos-admin/imagenes/{id}', [ProductosAdminController::class, 'index_imagenes']);
+    Route::get('productos-admin/imagenes/{id}/create', [ProductosAdminController::class, 'create_imagenes']);
+    Route::post('productos-admin/imagenes/{id}', [ProductosAdminController::class, 'store_imagenes']);
+    Route::put('productos-admin/imagenes/{id}/{idimagen}', [ProductosAdminController::class, 'update_imagenes']);
+    Route::delete('productos-admin/imagenes/{id}/{idimagen}', [ProductosAdminController::class, 'destroy_imagenes']);
+    Route::get('productos-admin/imagenes/{id}/{idimagen}/edit', [ProductosAdminController::class, 'edit_imagenes']);
     Route::resource('secciones-investigacion', SeccionesInvestigacionController::class);
     Route::post('/logout', [LogoutController::class, 'logout']);
     Route::get('/admin', [EventosController::class, 'index'])->name('dashboard');

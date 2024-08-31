@@ -16,46 +16,22 @@
             </button>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            @forelse ($productos as $producto)
             <div class="relative">
-                <a href="/productos/1">
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
-                    <div class="absolute top-2 left-2 border border-gray-700 rounded-full text-xs p-1">Procesos Socioculturales y Desarrollo Comunitario</div>
-                    <div class="text-center font-semibold px-1">Título</div>
+                <a href="/productos/{{$producto->id}}" class="block h-40 md:h-72 border border-gray-200 rounded-lg shadow">
+                    <img class="object-cover w-full h-full max-w-full rounded-lg" src="{{!empty($producto->imagenes[0]) ? $producto->imagenes[0]->imagen : '/images/logo.png'}}" alt="">
+                    <div class="absolute bg-white top-2 left-2 border border-gray-700 rounded-full text-xs p-1">{{$producto->seccion_investigacion->nombre}}</div>
                 </a>
+                <div class="text-center font-semibold px-1">
+                    <a href="/productos/{{$producto->id}}">
+                        Título
+                    </a>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
-            </div>
+            @empty
+                <p>No se econtraron productos</p>
+            @endforelse
+            
         </div>
     </section>
 </x-app-layout>

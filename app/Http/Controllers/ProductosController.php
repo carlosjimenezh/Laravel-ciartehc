@@ -22,4 +22,11 @@ class ProductosController extends Controller
             'producto' => $producto
         ]);
     }
+
+    function buscarPorCategoria (string $id) {
+        $productos = Producto::where('seccion_lineas_investigacion_id', $id)->with(['imagenes', 'seccion_investigacion'])->get();
+        return view('productos', [
+            'productos' => $productos
+        ]);
+    }
 }

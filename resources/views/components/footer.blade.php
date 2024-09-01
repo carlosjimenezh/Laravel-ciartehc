@@ -5,7 +5,7 @@
         </a>
         <div>
             <a href="https://www.udg.mx/es" target="_blank">
-                <img src="images/logo_udg.png" alt="" class="w-[200px] m-auto mb-[50px]">
+                <img src="/images/logo_udg.png" alt="" class="w-[200px] m-auto mb-[50px]">
             </a>
             <article class="social-wrapper flex items-center justify-between mb-10 md:justify-center md:gap-20 md:mb-0 z-10 relative">
                 <a href="https://www.facebook.com/profile.php?id=61556405097413" target="_blank">

@@ -22,7 +22,13 @@
                 <!-- Slides -->
                 @forelse ($eventos as $evento)
                     <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
-                        <img src="{{$evento->imagen}}" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
+                        @if (!empty($evento->url))
+                        <a href="{{$evento->url}}" target="_blank">
+                            <img src="{{$evento->imagen}}" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
+                        </a>   
+                        @else
+                            <img src="{{$evento->imagen}}" alt="" class="h-80 md:h-[550px] object-cover block w-full object-center" loading="lazy">
+                        @endif
                     </div>
                 @empty
                     <div class="swiper-slide border border-gray-200 rounded-lg shadow overflow-hidden">
@@ -54,7 +60,7 @@
                 <a href="https://www.facebook.com/teatrosurzapotlan" target="_blank">
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Teatro</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Arte en vivo que narra historias a través de la actuación en un escenario.</p>
                 <a href="https://www.facebook.com/teatrosurzapotlan" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                     Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -70,7 +76,7 @@
                 <a href="https://www.facebook.com/PolicromiaRadioUDGGuzman" target="_blank">
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Radio</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Radio UDG, contenido de audio, como música y noticias.</p>
                 <a href="https://www.facebook.com/PolicromiaRadioUDGGuzman" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                     Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -86,7 +92,7 @@
                 <a href="http://www.cusur.udg.mx/es/ciartehc/publicaciones" target="_blank">
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Publicaciones</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Medios digitales que difunden información, literatura y noticias.</p>
                 <a href="http://www.cusur.udg.mx/es/ciartehc/publicaciones" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                     Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -102,7 +108,7 @@
                 <a href="https://www.youtube.com/channel/UCsl8ULmX_tJrp6LEJq4v8hg" target="_blank">
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Audiovisual</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Videos que cuentan historias.</p>
                 <a href="https://www.youtube.com/channel/UCsl8ULmX_tJrp6LEJq4v8hg" target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                     Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">

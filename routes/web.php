@@ -19,6 +19,7 @@ Route::get('/equipo', [EquipoController::class, 'index']);
 Route::get('/equipo/{id}', [EquipoController::class, 'show']);
 Route::get('/productos', [ProductosController::class, 'index']);
 Route::get('/productos/{id}', [ProductosController::class, 'show']);
+Route::get('/productos/linea-investigacion/{idlineainvestigacion}', [ProductosController::class, 'buscarPorCategoria']);
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');

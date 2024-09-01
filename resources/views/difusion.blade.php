@@ -6,7 +6,7 @@
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/bg-teatro.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Teatro</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Arte en vivo que narra historias a través de la actuación en un escenario.</p>
             </div>
         </a>
 
@@ -14,7 +14,7 @@
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/bg-radio.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Radio</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Radio UDG, contenido de audio, como música y noticias.</p>
             </div>
         </a>
 
@@ -23,7 +23,7 @@
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/publicaciones.jpeg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Publicaciones</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Medios digitales que difunden información, literatura y noticias.</p>
             </div>
         </a>
 
@@ -32,7 +32,7 @@
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/audiovisuales.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Audiovisuales</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Videos que cuentan historias.</p>
             </div>
         </a>
 

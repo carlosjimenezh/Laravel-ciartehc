@@ -2,18 +2,18 @@
     <section class="my-[200px] md:my-[250px] md:mb-[200px] p-4 relative container">
         <h1 class="text-3xl md:text-5xl mb-10 font-bold text-center">Productos</h1>
         <div class="flex items-center justify-center pb-4 md:pb-8 flex-wrap">
-            <button type="button" class="text-xs text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">
+            <a href="/productos" type="button" class="{{request()->is('productos') ? 'text-white border-blue-600 bg-blue-700 hover:bg-blue-500' : 'bg-white hover:bg-gray-100'}} text-xs border focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3">
                 Todos
-            </button>
-            <button type="button" class="text-xs text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+            </a>
+            <a href="/productos/linea-investigacion/1" type="button" class="{{request()->is('productos/linea-investigacion/1') ? 'text-white border-blue-600 bg-blue-700 hover:bg-blue-500' : 'bg-white hover:bg-gray-100'}} text-xs border focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3">
                 Artes, Humanidades y Desarrollo Cultural
-            </button>
-            <button type="button" class="text-xs text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+            </a>
+            <a href="/productos/linea-investigacion/2" type="button" class="{{request()->is('productos/linea-investigacion/2') ? 'text-white border-blue-600 bg-blue-700 hover:bg-blue-500' : 'bg-white hover:bg-gray-100'}} text-xs border focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3">
                 Identidad Cultural y Comunicación
-            </button>
-            <button type="button" class="text-xs text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+            </a>
+            <a href="/productos/linea-investigacion/3" type="button" class="{{request()->is('productos/linea-investigacion/3') ? 'text-white border-blue-600 bg-blue-700 hover:bg-blue-500' : 'bg-white hover:bg-gray-100'}} text-xs border focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full font-medium px-5 py-2.5 text-center me-3 mb-3">
                 Procesos Socioculturales y Desarrollo Comunitario
-            </button>
+            </a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             @forelse ($productos as $producto)

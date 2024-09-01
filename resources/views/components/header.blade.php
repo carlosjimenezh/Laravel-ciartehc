@@ -40,7 +40,7 @@
                 </svg>
             </div>
             <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/productos/linea-investigacion/1" class="block font-semibold text-gray-900">
                     {{$lineas_investigacion[0]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
@@ -56,7 +56,7 @@
                 </svg>
             </div>
             <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/productos/linea-investigacion/2" class="block font-semibold text-gray-900">
                     {{$lineas_investigacion[1]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
@@ -72,7 +72,7 @@
                 </svg>
             </div>
             <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/productos/linea-investigacion/3" class="block font-semibold text-gray-900">
                     {{$lineas_investigacion[2]->nombre}}
                 <span class="absolute inset-0"></span>
                 </a>
@@ -121,13 +121,13 @@
             </button>
             <!-- 'Product' sub-menu, show/hide based on menu state. -->
             <div class="mt-2 space-y-2" id="disclosure-1">
-                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <a href="/productos/linea-investigacion/1" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     {{$lineas_investigacion[0]->nombre}}
                 </a>
-                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <a href="/productos/linea-investigacion/2" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     {{$lineas_investigacion[1]->nombre}}
                 </a>
-                <a href="/productos" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <a href="/productos/linea-investigacion/3" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     {{$lineas_investigacion[1]->nombre}}
                 </a>
             </div>
